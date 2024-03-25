@@ -1,5 +1,14 @@
 # zsarchitecture.ks
-Welcome to ZS Architecture, your one-stop destination for innovative architectural designs and services.
+Welcome to ZS Architecture's Frontend Architecture Platform!
 
 ## Introduction
-ZS Architecture is a platform dedicated to showcasing exceptio nal architectural projects and providing a range of architectural services. Whether you're an architect, looking for high-quality renders, or an enthusiast interested in exploring architectural designs, ZS Architecture offers a curated collection of projects, expert advice, and valuable resources.
+This site is designed to demonstrate my skills and expertise in creating immersive and visually appealing web experiences. As a frontend developer, I specialize in crafting engaging user interfaces and interactive designs that elevate the overall user experience.
+
+## Technologies Used
+* HTML5
+* CSS
+* JavaScript
+* Bootstrap
+
+##
+Take a look at my project in the link below:
