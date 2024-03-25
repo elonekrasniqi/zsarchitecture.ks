@@ -2,7 +2,7 @@
 Welcome to ZS Architecture's Frontend Architecture Platform!
 
 ## Introduction
-This site is designed to demonstrate my skills and expertise in creating immersive and visually appealing web experiences. As a frontend developer, I specialize in crafting engaging user interfaces and interactive designs that elevate the overall user experience.
+This README offers an insight into ZS Architecture's online platform, highlighting their architectural projects, services, and contact details.
 
 ## Technologies Used
 * HTML5
