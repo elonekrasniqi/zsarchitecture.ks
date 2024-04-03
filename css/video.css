@@ -4,7 +4,7 @@ html { scroll-behavior: smooth; overflow-x: hidden; }
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Outfit', sans-serif;
     font-size: 18px;
     line-height: 2em;
     overflow-x: hidden;
@@ -15,12 +15,8 @@ a {
     color: #666;
 }
 
-a:hover {
-    color: #29BBCC;
-    text-decoration: none;
-}
 
-h2, p { color: #666666; }
+h2, p { color: #dedddd; }
 
 .tm-site-header {
     position: absolute;
@@ -57,9 +53,9 @@ h2, p { color: #666666; }
     color: white;
 }
 
-.tm-bg-gray { background-color: #F4F4F4; }
-.tm-text-primary { color: #3399CC; }
-.tm-text-secondary { color: #3CAFAF; }
+.tm-bg-gray { background-color: #f4f4f455; }
+.tm-text-primary { color:#dedddd;}
+.tm-text-secondary { color: #d9c8c8; }
 
 .tm-nav-link {
     color: white;
@@ -86,104 +82,6 @@ h2, p { color: #666666; }
 
 .tm-welcome-container-inner { margin-top: 100px; }
 .tm-welcome-text { font-size: 1.6rem; }
-
-.btn {
-    padding: 15px 60px;
-    font-size: 1.6rem;
-    border: none;
-    cursor: pointer;
-}
-
-.btn-primary { background-color: #3399CC; }
-.btn-primary:hover { background-color: #1674a0; }
-
-/*
-    Button hover effect: https://tympanus.net/Development/CreativeButtons/
-*/
-
-.tm-btn-animate {
-    position: relative;
-    overflow: hidden;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    backface-visibility: hidden;
-    transition: all 0.3s ease;
-}
-
-.tm-btn-animate:before {
-    left: 0;
-    top: -100%;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    line-height: 2.5;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
-    font-family: "Font Awesome 5 Free";
-    font-style: normal;
-    font-weight: 900;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-}
-
-.tm-btn-animate:after {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
-}
-
-.tm-btn-animate:hover:before { top: 13px; }
-
-.tm-btn-animate span {
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    -webkit-transition: all 0.3s;
-    -webkit-backface-visibility: hidden;
-    -moz-transition: all 0.3s;
-    -moz-backface-visibility: hidden;
-    transition: all 0.3s;
-    backface-visibility: hidden;
-}
-
-.tm-btn-animate:hover span {
-    -webkit-transform: translateY(300%);
-    -moz-transform: translateY(300%);
-    -ms-transform: translateY(300%);
-    transform: translateY(300%);
-}
-
-.tm-btn-cta {
-    color: white;
-    background-color: rgba(0,0,0,0.5);
-}
-
-.tm-btn-cta:before { font-size: 180%; }
-.tm-btn-download:before { font-size: 120%; }
-.tm-btn-submit:before { font-size: 120%; }
-.tm-icon-down:before { content: '\f078'; }
-.tm-icon-download:before { content: '\f019'; }
-.tm-icon-submit:before { content: '\f1d8'; }
-.tm-icon-submit:hover:before { top: 18px; }
-.tm-btn-cta:hover { color: white; }
-
-.tm-btn-download:hover,
-.tm-btn-download:focus,
-.tm-btn-submit:hover,
-.tm-btn-submit:focus {
-    color: white;
-    background-color: #3399CC;
-}
-
-.tm-btn-download span { padding-top: 10px; }
-.tm-btn-small { 
-    padding: 10.5px 35px;
-    font-size: 1.2rem; 
-}
 
 #tm-video-control-button {
     position: absolute;
@@ -323,17 +221,7 @@ h2, p { color: #666666; }
 }
 
 .tm-share-button:last-child { margin-right: 0; }
-.tm-text-link { color: #3399CC; }
-
-.tm-likes-box,
-.tm-btn-download {
-    width: 280px;
-    height: 60px;
-}
-
-.tm-likes-box { padding-top: 12px; }
-.tm-video-description-box { max-width: 920px; }
-.tm-text-gray { color: #6F7071; }
+.t
 
 .tm-fixed-header {
     background-position: center;

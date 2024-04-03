@@ -1,13 +1,13 @@
 
 :root {
-  --white-color:                  #ffffff;
+  --white-color:                  white;
   --primary-color:                #F8CB2E;
   --secondary-color:              #EE5007;
-  --section-bg-color:             #f0f8ff;
+  --section-bg-color:             #b4bcc4;
   --custom-btn-bg-color:          #EE5007;
   --custom-btn-bg-hover-color:    #c01f27;
-  --dark-color:                   #000000;
-  --p-color:                      #717275;
+  --dark-color:                   #1c1a1a;
+  --p-color:                      #6f7172;
   --border-color:                 #7fffd4;
   --link-hover-color:             #B22727;
 
@@ -32,10 +32,6 @@
   --font-weight-bold:             700;
 }
 
-body {
-  background-color: var(--white-color);
-  font-family: var(--body-font-family); 
-}
 
 
 /*---------------------------------------
