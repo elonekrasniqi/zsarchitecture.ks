@@ -15,75 +15,68 @@
         <link rel="stylesheet" href="css/style.css">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>      
         <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/bootstrap-icons.css" rel="stylesheet">
-        <link href="css/index.css" rel="stylesheet">
-        <link href="css/video.css" rel="stylesheet">
+        <link href="css/projects.css" rel="stylesheet">
         
     </head>
     
     <body>
+        
         <style>
-            body {
+
+/*---------------------------------------
+ABOUT-US     
+-----------------------------------------*/
+body {
+    z-index: 2000; 
   background-color: rgb(54, 52, 52);
   font-family: var(--body-font-family); 
-}
-
-            .about-us {
+  }
+  .about-us {
   height: 540px;
   margin-top: 60px;
   width: 100%;
-}
-
-.about-us .container  {
+  }
+  .about-us .container  {
   display: flex;
   width: 100%;
   font-family: monospace;
   justify-content: center;
   gap: 35px;
-  
-}
-
-
-.about-us .container .left-side {
+  }
+  .about-us .container .left-side {
   color: black;
   margin-top: 150px;
   margin-left: 45px;
-
-}
-
-.about-us .container .left-side h2 {
+  }
+  .about-us .container .left-side h2 {
   font-size: 4rem;
   font-weight: bolder;
   border-bottom: solid #000 1.8px;
-
-}
-
-.about-us .container .left-side .info p {
+  
+  }
+  .about-us .container .left-side .info p {
   width: 480px;
   margin-top: 15px;
   font-size: 1.4rem;
-}
-
-
-.about-us .container .right-side {
+  }
+  .about-us .container .right-side {
   color: black;
-  
-  
-}
-
-
-.about-us .container .right-side img {
+  }
+  .about-us .container .right-side img {
   width: 50vh;
   height: 60vh;
-}
+  }
 
-        </style>
+</style>
+
+<div class="intro-animation">
+    <img src="images/icon.jpg" alt="Intro Image">
+  </div>
 
         <main>
-
             <nav class="navbar navbar-expand-lg">
                 <div class="container">
-                    <a class="navbar-brand" href="index.html" style=" color: #d5aaaa;">
+                    <a class="navbar-brand" href="index.html" style="color: #d5aaaa;">
                         zsarchitecture
                     </a>
     
@@ -110,7 +103,7 @@
                 <div class="section-overlay"></div>
                 <div class="video-wrap">
                     <video autoplay="" loop="" muted="" class="custom-video" poster="">
-                        <source src="video/pexels-2022395.mp4" type="video/mp4">
+                        <source src="video/1_1 - Clip.mp4" type="video/mp4">
 
                         Your browser does not support the video tag.
                     </video>
@@ -124,18 +117,15 @@
                         <div class="container-fluid">
                             <div id="content" class="mx-auto tm-content-container">
                                 <main>
-                                    
                                     <div class="row tm-catalog-item-list">
                                         <div class="col-lg-4 col-md-6 col-sm-12 tm-catalog-item">
                                             <div class="position-relative tm-thumbnail-container">
                                                 <img src="images/projekte/BeautySalon ps/1_1 - Photo.jpg" alt="Image" class="img-fluid tm-catalog-item-img">    
                                             </div>    
                                             <div class="p-4 tm-bg-gray tm-catalog-item-description">
-                                                <h3 class="tm-text-primary mb-3 tm-catalog-item-title">Beauty Salon </h3>
-                                                <p class="tm-catalog-item-text">Video thumbnail has a link to another HTML page. 
-                                                    Categories <span class="tm-text-secondary">do not need</span> any JS. 
-                                                    They are just separated HTML pages. Paging is at the bottom to extend the list as long as you want. 
-                                                    This can be a large catalog.</p>
+                                                <h3 class="tm-text-primary mb-3 tm-catalog-item-title">Beauty Salon</h3>
+                                                <p class="tm-catalog-item-text">Discover the epitome of beauty and relaxation at our luxurious beauty salon. 
+                                                    Step into a world of pampering and leave feeling refreshed, confident, and beautiful.</p>
                                             </div>
                                         </div>
                                         <div class="col-lg-4 col-md-6 col-sm-12 tm-catalog-item">
@@ -153,9 +143,9 @@
                                                 <img src="images/projekte/restaurant/k_1 - Photo.jpg" alt="Image" class="img-fluid tm-catalog-item-img">    
                                             </div>                            
                                             <div class="p-4 tm-bg-gray tm-catalog-item-description">
-                                                <h3 class="tm-text-primary mb-3 tm-catalog-item-title">Sagittis sodales enim</h3>
-                                                <p class="tm-catalog-item-text">You are allowed to use this video catalog for your business websites. 
-                                                Please do not make a re-distribution of our template ZIP file on any template collection website.</p>
+                                                <h3 class="tm-text-primary mb-3 tm-catalog-item-title">Modern restaurant</h3>
+                                                <p class="tm-catalog-item-text">Experience the fusion of exquisite flavors and contemporary ambiance at our modern restaurant.
+                                                    Whether you're gathering with loved ones or simply seeking a delightful dining experience, our restaurant awaits to delight your senses.</p>
                                             </div>
                                         </div>
                                         <div class="col-lg-4 col-md-6 col-sm-12 tm-catalog-item">
@@ -163,16 +153,15 @@
                                                 <img src="images/projekte/shpija/1_1 - Photo (1).jpg" alt="Image" class="img-fluid tm-catalog-item-img">    
                                             </div>    
                                             <div class="p-4 tm-bg-gray tm-catalog-item-description">
-                                                <h3 class="tm-text-primary mb-3 tm-catalog-item-title">Nam tincidunt consectetur</h3>
-                                                <p class="tm-catalog-item-text">Creating dream homes in the clouds before they land on earth 🏠</p><p>Dreaming of your perfect home? Picture it first with our state-of-the-art house design and visualization services!</p>
-                                            </div>
+                                                <h3 class="tm-text-primary mb-3 tm-catalog-item-title">Glass House</h3>
+                                                <p class="tm-catalog-item-text">Creating dream homes in the clouds before they land on earth 🏠</p></div>
                                         </div>
                                         <div class="col-lg-4 col-md-6 col-sm-12 tm-catalog-item">
                                             <div class="position-relative tm-thumbnail-container">
                                                 <img src="images/projekte/shtepi 1PS/1_1 - Photo.jpg" alt="Image" class="img-fluid tm-catalog-item-img">    
                                             </div>
                                             <div class="p-4 tm-bg-gray tm-catalog-item-description">
-                                                <h3 class="tm-text-primary mb-3 tm-catalog-item-title">Praesent posuere rhoncus</h3>
+                                                <h3 class="tm-text-primary mb-3 tm-catalog-item-title">Summer House</h3>
                                                 <p class="tm-catalog-item-text"> Don't just imagine it, see it with exterior visualization. Let's create your perfect home together!
                                                     👀 We let you visualize every detail, from the color of the bricks to the style of the roof.</p>
                                             </div>
@@ -182,12 +171,17 @@
                                                 <img src="images/projekte/shtepi 2ps/1_1 - Photo.jpg" alt="Image" class="img-fluid tm-catalog-item-img">    
                                             </div>                            
                                             <div class="p-4 tm-bg-gray tm-catalog-item-description">
-                                                <h3 class="tm-text-primary mb-3 tm-catalog-item-title">Turpis massa aliquam</h3>
-                                                <p class="tm-catalog-item-text">Transforming four walls into a masterpiece, one room at a time </p>
+                                                <h3 class="tm-text-primary mb-3 tm-catalog-item-title">Modern House</h3>
+                                                <p class="tm-catalog-item-text">Transforming four walls into a masterpiece, one room at a time. </p>
                                             </div>
                                         </div>
-                                        </div>
-                                    </div></div></div>
+                                    </div>
+                                </main>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
             </section>
             <section class="about-section section-padding" id="section_3">
                 
@@ -216,10 +210,22 @@
             <hr>
             <address>Prishtina 10000</address>
             <p>Numri i telefonit: +383 48 881 000</p>
-            <a href="https://www.instagram.com/zsarchitecture.ks/" target="_blank"><img src="images/ig.png" alt="iglogo"></a>
-            <a href="mailto:zsarchitecture.ks@gmail.com" target="_blank"><img src="images/gm.jpg" alt="logogmail"></a>
+            <a href="https://www.instagram.com/zsarchitecture.ks/" target="_blank"><img src="images/ig.webp" alt="iglogo"></a>
+            <a href="mailto:zsarchitecture.ks@gmail.com" target="_blank"><img src="images/gm.png" alt="logogmail"></a>
         </footer>
-        
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var introAnimation = document.querySelector('.intro-animation');
+
+    // Set a timeout to remove the animation element after the animation duration
+    setTimeout(function() {
+        introAnimation.style.display = 'none'; // Remove the animation after fade-out
+        document.body.style.visibility = 'visible'; // Show the body content
+        document.body.style.opacity = '1'; // Fade in the body content
+    }, 3000); // Match the animation duration in milliseconds (3 seconds)
+});
+
+    </script>
         <!-- JAVASCRIPT FILES -->
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
