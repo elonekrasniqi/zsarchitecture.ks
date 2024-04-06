@@ -27,15 +27,17 @@
 ABOUT-US     
 -----------------------------------------*/
 body {
-    z-index: 2000; 
-  background-color: rgb(54, 52, 52);
+  z-index: 2000; 
+  background-color: #606364;
   font-family: var(--body-font-family); 
   }
+
   .about-us {
   height: 540px;
   margin-top: 60px;
   width: 100%;
   }
+
   .about-us .container  {
   display: flex;
   width: 100%;
@@ -43,30 +45,34 @@ body {
   justify-content: center;
   gap: 35px;
   }
+
   .about-us .container .left-side {
   color: black;
   margin-top: 150px;
   margin-left: 45px;
   }
+
   .about-us .container .left-side h2 {
+    color: #000;
   font-size: 4rem;
   font-weight: bolder;
   border-bottom: solid #000 1.8px;
-  
   }
+
   .about-us .container .left-side .info p {
   width: 480px;
   margin-top: 15px;
   font-size: 1.4rem;
   }
+
   .about-us .container .right-side {
   color: black;
   }
+
   .about-us .container .right-side img {
   width: 50vh;
   height: 60vh;
   }
-
 </style>
 
 <div class="intro-animation">
@@ -76,7 +82,7 @@ body {
         <main>
             <nav class="navbar navbar-expand-lg">
                 <div class="container">
-                    <a class="navbar-brand" href="index.html" style="color: #d5aaaa;">
+                    <a class="navbar-brand" href="index.html" style="color: #aba4aa">
                         zsarchitecture
                     </a>
     
@@ -103,7 +109,7 @@ body {
                 <div class="section-overlay"></div>
                 <div class="video-wrap">
                     <video autoplay="" loop="" muted="" class="custom-video" poster="">
-                        <source src="video/1_1 - Clip.mp4" type="video/mp4">
+                        <source src="video/1_2 - Clip.mp4" type="video/mp4">
 
                         Your browser does not support the video tag.
                     </video>
@@ -206,23 +212,22 @@ body {
 
 
         <footer>
-            <h4 style="color:  #d5aaaa;">zsarchitecture</h4>
+            <h4 style="color:#aba4aa;">zsarchitecture</h4>
             <hr>
-            <address>Prishtina 10000</address>
+            <p>Prishtina 10000</p>
             <p>Numri i telefonit: +383 48 881 000</p>
             <a href="https://www.instagram.com/zsarchitecture.ks/" target="_blank"><img src="images/ig.webp" alt="iglogo"></a>
             <a href="mailto:zsarchitecture.ks@gmail.com" target="_blank"><img src="images/gm.png" alt="logogmail"></a>
         </footer>
 <script>
+    //animation
 document.addEventListener('DOMContentLoaded', function() {
     var introAnimation = document.querySelector('.intro-animation');
-
-    // Set a timeout to remove the animation element after the animation duration
     setTimeout(function() {
-        introAnimation.style.display = 'none'; // Remove the animation after fade-out
-        document.body.style.visibility = 'visible'; // Show the body content
-        document.body.style.opacity = '1'; // Fade in the body content
-    }, 3000); // Match the animation duration in milliseconds (3 seconds)
+        introAnimation.style.display = 'none'; 
+        document.body.style.visibility = 'visible'; 
+        document.body.style.opacity = '1'; 
+    }, 3000); 
 });
 
     </script>

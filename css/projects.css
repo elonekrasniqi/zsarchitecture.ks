@@ -20,10 +20,10 @@ a {
 }
 
 
-h2, p { color: #dedddd; }
+h2, p { color:#5c6467d9;}
 
-.tm-bg-gray { background-color: #afafaf6c; }
-.tm-text-primary .tm-catalog-item-title { color:#dedddd;}
+.tm-bg-gray { background-color: #aba4aa; }
+.tm-text-primary .tm-catalog-item-title { color:#5c6467d9;}
 .tm-catalog-item-text{
     color: black;
 }
