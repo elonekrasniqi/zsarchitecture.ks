@@ -28,7 +28,7 @@ ABOUT-US
 -----------------------------------------*/
 body {
   z-index: 2000; 
-  background-color: #606364;
+  background-color: #5a6366;
   font-family: var(--body-font-family); 
   }
 
@@ -126,8 +126,9 @@ body {
                                     <div class="row tm-catalog-item-list">
                                         <div class="col-lg-4 col-md-6 col-sm-12 tm-catalog-item">
                                             <div class="position-relative tm-thumbnail-container">
-                                                <img src="images/projekte/BeautySalon ps/1_1 - Photo.jpg" alt="Image" class="img-fluid tm-catalog-item-img">    
-                                            </div>    
+                                                <img src="images/projekte/BeautySalon ps/1_1 - Photo.jpg" alt="Image" class="img-fluid tm-catalog-item-img" onclick="navigateToProject('beauty-salon')">
+                                            </div>
+                                             
                                             <div class="p-4 tm-bg-gray tm-catalog-item-description">
                                                 <h3 class="tm-text-primary mb-3 tm-catalog-item-title">Beauty Salon</h3>
                                                 <p class="tm-catalog-item-text">Discover the epitome of beauty and relaxation at our luxurious beauty salon. 
@@ -136,17 +137,19 @@ body {
                                         </div>
                                         <div class="col-lg-4 col-md-6 col-sm-12 tm-catalog-item">
                                             <div class="position-relative tm-thumbnail-container">
-                                                <img src="images/projekte/kafe/1.jpg" alt="Image" class="img-fluid tm-catalog-item-img">    
+                                                <img src="images/projekte/kafe/1.jpg" alt="Image" class="img-fluid tm-catalog-item-img" onclick="navigateToProject('Scafe')">    
                                             </div>
                                             <div class="p-4 tm-bg-gray tm-catalog-item-description">
                                                 <h3 class="tm-text-primary mb-3 tm-catalog-item-title">Sunrise Cafe</h3>
-                                                <p class="tm-catalog-item-text">Coffee, creativity & cozy corners - welcome to our café! ☕️🎨🛋️. 
+                                                <p class="tm-catalog-item-text">Sunrise caffe
+                                                    Interior design making the bar as pleasant and welcoming as possible for customers.
+                                                    The use of light pastel colors make the environment cozy.                                                    
                                                 </p>
                                             </div>
                                         </div>
                                         <div class="col-lg-4 col-md-6 col-sm-12 tm-catalog-item">
                                             <div class="position-relative tm-thumbnail-container">
-                                                <img src="images/projekte/restaurant/k_1 - Photo.jpg" alt="Image" class="img-fluid tm-catalog-item-img">    
+                                                <img src="images/projekte/restaurant/k_1 - Photo.jpg" alt="Image" class="img-fluid tm-catalog-item-img" onclick="navigateToProject('restaurant')">    
                                             </div>                            
                                             <div class="p-4 tm-bg-gray tm-catalog-item-description">
                                                 <h3 class="tm-text-primary mb-3 tm-catalog-item-title">Modern restaurant</h3>
@@ -156,7 +159,7 @@ body {
                                         </div>
                                         <div class="col-lg-4 col-md-6 col-sm-12 tm-catalog-item">
                                             <div class="position-relative tm-thumbnail-container">
-                                                <img src="images/projekte/shpija/1_1 - Photo (1).jpg" alt="Image" class="img-fluid tm-catalog-item-img">    
+                                                <img src="images/projekte/shpija/1_1 - Photo (1).jpg" alt="Image" class="img-fluid tm-catalog-item-img" onclick="navigateToProject('shpija')">    
                                             </div>    
                                             <div class="p-4 tm-bg-gray tm-catalog-item-description">
                                                 <h3 class="tm-text-primary mb-3 tm-catalog-item-title">Glass House</h3>
@@ -164,7 +167,7 @@ body {
                                         </div>
                                         <div class="col-lg-4 col-md-6 col-sm-12 tm-catalog-item">
                                             <div class="position-relative tm-thumbnail-container">
-                                                <img src="images/projekte/shtepi 1PS/1_1 - Photo.jpg" alt="Image" class="img-fluid tm-catalog-item-img">    
+                                                <img src="images/projekte/shtepi 1PS/1_1 - Photo.jpg" alt="Image" class="img-fluid tm-catalog-item-img" onclick="navigateToProject('shtepi')">    
                                             </div>
                                             <div class="p-4 tm-bg-gray tm-catalog-item-description">
                                                 <h3 class="tm-text-primary mb-3 tm-catalog-item-title">Summer House</h3>
@@ -174,7 +177,7 @@ body {
                                         </div>
                                         <div class="col-lg-4 col-md-6 col-sm-12 tm-catalog-item">
                                             <div class="position-relative tm-thumbnail-container">
-                                                <img src="images/projekte/shtepi 2ps/1_1 - Photo.jpg" alt="Image" class="img-fluid tm-catalog-item-img">    
+                                                <img src="images/projekte/shtepi 2ps/1_1 - Photo.jpg" alt="Image" class="img-fluid tm-catalog-item-img" onclick="navigateToProject('shtepi_2ps')">    
                                             </div>                            
                                             <div class="p-4 tm-bg-gray tm-catalog-item-description">
                                                 <h3 class="tm-text-primary mb-3 tm-catalog-item-title">Modern House</h3>
@@ -229,6 +232,41 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.style.opacity = '1'; 
     }, 3000); 
 });
+var introShown = localStorage.getItem('introShown');
+        if (!introShown) {
+            // Show intro animation
+            var introAnimation = document.querySelector('.intro-animation');
+            setTimeout(function() {
+                introAnimation.style.display = 'none'; 
+                document.body.style.visibility = 'visible'; 
+                document.body.style.opacity = '1'; 
+            }, 3000); 
+            // Set flag to indicate intro has been shown
+            localStorage.setItem('introShown', true);
+        }
+
+        // Flag to check if navigating away from the page
+        var navigatingAway = false;
+
+        // Function to handle navigation to projects
+        function navigateToProject(projectName) {
+            // Set flag to indicate navigating away
+            navigatingAway = true;
+            // Redirect to the corresponding project page
+            window.location.href = projectName + '.html'; // Assuming each project has its own HTML file named after the project
+        }
+
+        // Event listener for beforeunload to handle navigating away
+        window.addEventListener('beforeunload', function(event) {
+            // If navigating away from the page, remove the flag
+            if (navigatingAway) {
+                localStorage.removeItem('introShown');
+            }
+        });
+function navigateToProject(projectName) {
+    // Redirect to the corresponding project page
+    window.location.href = projectName + '.html'; // Assuming each project has its own HTML file named after the project
+}
 
     </script>
         <!-- JAVASCRIPT FILES -->
