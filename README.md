@@ -1,5 +1,5 @@
 # zsarchitecture.ks
-Welcome to ZS Architecture's Frontend Architecture Platform!
+Welcome to ZS Architecture's Frontend Platform!
 
 ## Introduction
 This README offers an insight into ZS Architecture's online platform, highlighting their architectural projects, services, and contact details.
