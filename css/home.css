@@ -40,7 +40,6 @@ h2, p { color:#5c6467d9;}
 
 .tm-thumbnail-container { overflow: hidden; }
 .tm-thumbnail-container img { transition: all 0.3s ease; }
-.tm-thumbnail-container:hover img { transform: scale(1.2) rotate(5deg); }
 
 .tm-catalog-item-description {
     flex: 1;

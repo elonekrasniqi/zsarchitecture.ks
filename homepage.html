@@ -15,50 +15,27 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/home.css" rel="stylesheet">
     <style>
-        /* Custom CSS for about-us section */
+    .tm-catalog-item {
+    display: flex;
+    flex-direction: column;
+    height: 600px; /* Fixed height for project boxes */
+    position: relative; /* Position relative for absolute positioning of buttons */
+}
+
+.tm-catalog-item-description {
+    flex-grow: 1;
+}
+
+.tm-catalog-item .view-more-btn {
+    position: absolute; 
+    bottom: 10px; /* Adjust as needed */
+}
         body {
             background-color: #5a6366;
             font-family: var(--body-font-family); 
         }
-
-        .about-us {
-            height: 540px;
-            margin-top: 60px;
-            width: 100%;
-        }
-
-        .about-us .container {
-            display: flex;
-            width: 100%;
-            font-family: monospace;
-            justify-content: center;
-            gap: 35px;
-        }
-
-        .about-us .container .left-side {
-            color: black;
-            margin-top: 150px;
-            margin-left: 45px;
-        }
-
-        .about-us .container .left-side h2 {
-            color: #000;
-            font-size: 4rem;
-            font-weight: bolder;
-            border-bottom: solid #000 1.8px;
-        }
-
-        .about-us .container .left-side .info p {
-            width: 480px;
-            margin-top: 15px;
-            font-size: 1.4rem;
-        }
-
-        .about-us .container .right-side img {
-            width: 50vh;
-            height: 60vh;
-        }
     </style>
+    
 </head>
 
 <body>
@@ -107,13 +84,14 @@
                                     <div class="col-lg-4 col-md-6 col-sm-12 tm-catalog-item">
                                         <div class="position-relative tm-thumbnail-container">
                                             <img src="images/projekte/BeautySalon ps/1_1 - Photo.jpg" alt="Image" class="img-fluid tm-catalog-item-img" onclick="navigateToProject('beauty-salon')">
-                                        </div>
+                                              </div>
                                          
                                         <div class="p-4 tm-bg-gray tm-catalog-item-description">
                                             <h3 class="tm-text-primary mb-3 tm-catalog-item-title">Beauty Salon</h3>
                                             <p class="tm-catalog-item-text">Discover the epitome of beauty and relaxation at our luxurious beauty salon. 
                                                 Step into a world of pampering and leave feeling refreshed, confident, and beautiful.</p>
-                                        </div>
+                                                <a href="Projects/beauty-salon.html" class="btn btn-secondary btn-sm view-more-btn">View More</a> <!-- Button added -->
+                                            </div>
                                     </div>
                                     <div class="col-lg-4 col-md-6 col-sm-12 tm-catalog-item">
                                         <div class="position-relative tm-thumbnail-container">
@@ -124,7 +102,8 @@
                                             <p class="tm-catalog-item-text">Sunrise caffe
                                                 Interior design making the bar as pleasant and welcoming as possible for customers.
                                                 The use of light pastel colors make the environment cozy.                                                    
-                                            </p>
+                                            </p><a href="Projects/Scafe.html" class="btn btn-secondary btn-sm view-more-btn">View More</a> 
+                                       
                                         </div>
                                     </div>
                                     <div class="col-lg-4 col-md-6 col-sm-12 tm-catalog-item">
@@ -135,7 +114,8 @@
                                             <h3 class="tm-text-primary mb-3 tm-catalog-item-title">Modern restaurant</h3>
                                             <p class="tm-catalog-item-text">Experience the fusion of exquisite flavors and contemporary ambiance at our modern restaurant.
                                                 Whether you're gathering with loved ones or simply seeking a delightful dining experience, our restaurant awaits to delight your senses.</p>
-                                        </div>
+                                                <a href="Projects/restaurant.html" class="btn btn-secondary btn-sm view-more-btn">View More</a> 
+                                            </div>
                                     </div>
                                     <div class="col-lg-4 col-md-6 col-sm-12 tm-catalog-item">
                                         <div class="position-relative tm-thumbnail-container">
@@ -143,7 +123,8 @@
                                         </div>    
                                         <div class="p-4 tm-bg-gray tm-catalog-item-description">
                                             <h3 class="tm-text-primary mb-3 tm-catalog-item-title">Glass House</h3>
-                                            <p class="tm-catalog-item-text">Creating dream homes in the clouds before they land on earth 🏠</p></div>
+                                            <p class="tm-catalog-item-text">Creating dream homes in the clouds before they land on earth 🏠</p>
+                                            <a href="Projects/shpija.html" class="btn btn-secondary btn-sm view-more-btn">View More</a> </div>
                                     </div>
                                     <div class="col-lg-4 col-md-6 col-sm-12 tm-catalog-item">
                                         <div class="position-relative tm-thumbnail-container">
@@ -153,6 +134,7 @@
                                             <h3 class="tm-text-primary mb-3 tm-catalog-item-title">Summer House</h3>
                                             <p class="tm-catalog-item-text"> Don't just imagine it, see it with exterior visualization. Let's create your perfect home together!
                                                 👀 We let you visualize every detail, from the color of the bricks to the style of the roof.</p>
+                                                <a href="Projects/shtepi.html" class="btn btn-secondary btn-sm view-more-btn">View More</a> 
                                         </div>
                                     </div>
                                     <div class="col-lg-4 col-md-6 col-sm-12 tm-catalog-item">
@@ -162,6 +144,7 @@
                                         <div class="p-4 tm-bg-gray tm-catalog-item-description">
                                             <h3 class="tm-text-primary mb-3 tm-catalog-item-title">Modern House</h3>
                                             <p class="tm-catalog-item-text">Transforming four walls into a masterpiece, one room at a time. </p>
+                                            <a href="Projects/shtepi_2ps.html" class="btn btn-secondary btn-sm view-more-btn">View More</a> 
                                         </div>
                                     </div>
                                 </div>
@@ -171,22 +154,6 @@
                 </div>
             </div>
             
-        </section>
-
-        <section class="about-section section-padding" id="section_3">
-            <div id="about-us" class="about-us">
-                <div class="container">
-                    <div class="left-side">
-                        <div class="info">
-                            <h2>About me</h2>
-                            <p></p>
-                        </div>
-                    </div>
-                    <div class="right-side">
-                        <img src="images/profile.jpg" alt="">
-                    </div>
-                </div>
-            </div>
         </section>
     </main>
 
