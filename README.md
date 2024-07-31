@@ -11,4 +11,4 @@ This README offers an insight into ZS Architecture's online platform, highlighti
 * Bootstrap
 
 ##
-Take a look at my project in the link below:
+Take a look at my project in the link below: https://zsarchitecture.github.io/
