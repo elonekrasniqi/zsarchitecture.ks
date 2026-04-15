@@ -173,6 +173,11 @@ strong {
   left: 0;
   margin-top: 51px;
 }
+/* STICKY NAVBAR FIX */
+.sticky-wrapper.is-sticky .navbar .nav-link,
+.sticky-wrapper.is-sticky .navbar .custom-btn {
+    color: #ffffff !important;
+}
 
 .sticky-wrapper.is-sticky .navbar {
   background:
@@ -311,9 +316,10 @@ footer a:hover img { transform: scale(1.2); }
 .tm-catalog-item {
     background: #ffffff;
     border-radius: 12px;
-    border: 1px solid rgba(20, 24, 33, 0.08); /* 👈 subtle line */
+    border: 1px solid black; /* 👈 subtle line */
     position: relative;
     z-index: 1;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
+

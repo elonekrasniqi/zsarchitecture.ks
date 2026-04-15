@@ -5,65 +5,157 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+
     <title>ZSARCHITECTURE</title>
 
-    <!-- CSS FILES -->        
+    <!-- CSS FILES -->
     <link rel="stylesheet" href="fontawesome/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>      
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/home.css" rel="stylesheet">
+    <link href="css/projects.css" rel="stylesheet">
+
     <style>
-    .tm-catalog-item {
-    display: flex;
-    flex-direction: column;
-    height: 600px;
-    position: relative;
-}
+        html, body {
+            margin: 0;
+            padding: 0;
+            background: white;
+            font-family: 'Outfit', sans-serif;
+            overflow-x: hidden;
+        }
 
-.tm-catalog-item-description {
-    flex-grow: 1;
-}
+        .card-wrapper {
+            position: relative;
+            margin-bottom: 64px;
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+            overflow: visible;
+        }
 
-.tm-catalog-item .view-more-btn {
-    position: absolute; 
-    bottom: 10px;
-}
-        body {
-            background-color: #929494;
-            font-family: var(--body-font-family); 
+        .card-wrapper::before {
+            content: "";
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            bottom: -8px;
+            left: -8px;
+            border-radius: 18px;
+            z-index: 0;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s ease, filter 0.3s ease;
+            background:
+                radial-gradient(circle at top left, rgba(255,255,255,0.08), transparent 40%),
+                linear-gradient(180deg, #141821 0%, #0f1115 100%);
+            filter: blur(12px);
+        }
+
+        .card-wrapper:hover {
+            transform: translateY(-6px);
+        }
+
+        .card-wrapper:hover::before {
+            opacity: 0.75;
+        }
+
+        .tm-catalog-item {
+            display: flex;
+            flex-direction: column;
+            height: 600px;
+            position: relative;
+            z-index: 1;
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .tm-thumbnail-container {
+            overflow: hidden;
+        }
+
+        .tm-thumbnail-container img {
+            width: 100%;
+            display: block;
+            transition: transform 0.35s ease;
+            cursor: pointer;
+        }
+
+        .card-wrapper:hover .tm-thumbnail-container img {
+            transform: scale(1.03);
+        }
+
+        .tm-catalog-item-description {
+            flex-grow: 1;
+            position: relative;
+            background: #ffffff !important;
+        }
+
+        .tm-catalog-item-title {
+            color: #2a3133;
+        }
+
+        .tm-catalog-item-text {
+            color: #000;
+        }
+
+        .tm-catalog-item .view-more-btn {
+            position: absolute;
+            bottom: 10px;
+            background-color: rgba(20,24,33,0.25) !important;
+            color: #141821 !important;
+            border: none !important;
+        }
+
+        .tm-catalog-item .view-more-btn:hover {
+            background-color: rgba(20,24,33,0.35) !important;
+            color: #141821 !important;
+        }
+
+        .tm-catalog-item-list,
+        .container-fluid,
+        .row,
+        .tm-content-container {
+            overflow: visible !important;
         }
     </style>
 </head>
 
 <body>
+
+    <div class="intro-animation">
+        <img src="images/icon.jpg" alt="Intro Image">
+    </div>
+
     <main>
         <nav class="navbar navbar-expand-lg">
             <div class="container">
-                <a class="navbar-brand" href="index.html" style="color: #aba4aa">
+                <a class="navbar-brand" href="index.html" style="color: white">
                     zsarchitecture
                 </a>
 
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav align-items-lg-center ms-auto me-lg-5">
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_1" id="home">Ballina</a>
+                            <a class="nav-link click-scroll" href="#section_1">Ballina</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_2" id="projects">Projekte</a>
+                            <a class="nav-link click-scroll" href="#section_2">Projektet</a>
                         </li>
+
+                        <div class="dropdown">
+                            <button class="btn custom-btn" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false" style="margin-left: 45px;">
+                                Gjuha
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <li><a class="dropdown-item" href="homepage.html">Anglisht</a></li>
+                                <li><a class="dropdown-item" href="homepage-sh.html">Shqip</a></li>
+                            </ul>
+                        </div>
                     </ul>
-                    <div class="dropdown">
-                        <button class="btn custom-btn" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false" style="margin-left: 45px;">
-                            Gjuha
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <li><a class="dropdown-item" href="homepage.html">Anglisht</a></li>
-                            <li><a class="dropdown-item" href="homepage-sh.html">Shqip</a></li>
-                        </ul>
-                    </div>
                 </div>
             </div>
         </nav>
@@ -71,9 +163,9 @@
         <section class="hero-section" id="section_1">
             <div class="section-overlay"></div>
             <div class="video-wrap">
-                <video autoplay loop muted class="custom-video" poster="">
+                <video autoplay="" loop="" muted="" class="custom-video" poster="">
                     <source src="video/1_1 - Clip.mp4" type="video/mp4">
-                    Shfletuesi juaj nuk e mbështet elementin video.
+                    Shfletuesi juaj nuk e mbështet videon.
                 </video>
             </div>
         </section>
@@ -85,66 +177,125 @@
                         <div id="content" class="mx-auto tm-content-container">
                             <main>
                                 <div class="row tm-catalog-item-list">
-                                    <div class="col-lg-4 col-md-6 col-sm-12 tm-catalog-item">
-                                        <div class="position-relative tm-thumbnail-container">
-                                            <img src="images/projekte/BeautySalon ps/1_1 - Photo.jpg" alt="Image" class="img-fluid tm-catalog-item-img" onclick="navigateToProject('beauty-salon')">
-                                        </div>
-                                        <div class="p-4 tm-bg-gray tm-catalog-item-description">
-                                            <h3 class="tm-text-primary mb-3 tm-catalog-item-title" id="beauty_salon">Salloni i Bukurisë</h3>
-                                            <p class="tm-catalog-item-text" id="beauty_salon_desc">Zbuloni kulmin e bukurisë dhe relaksimit në sallonin tonë luksoz të bukurisë. Hyni në një botë përkëdhelje dhe dilni të ndiheni të freskuar, të sigurt dhe të bukur.</p>
-                                            <a href="beauty-salon.html" class="btn btn-secondary btn-sm view-more-btn" id="view_more_1">Shiko më shumë</a>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-12 tm-catalog-item">
-                                        <div class="position-relative tm-thumbnail-container">
-                                            <img src="images/projekte/kafe/1.jpg" alt="Image" class="img-fluid tm-catalog-item-img" onclick="navigateToProject('Scafe')">
-                                        </div>
-                                        <div class="p-4 tm-bg-gray tm-catalog-item-description">
-                                            <h3 class="tm-text-primary mb-3 tm-catalog-item-title" id="sunrise_cafe">Sunrise Kafe</h3>
-                                            <p class="tm-catalog-item-text" id="sunrise_cafe_desc">Dizajn i brendshëm i kafenesë, duke e bërë këtë kafe sa më të këndshme dhe mikpritëse për klientët. Përdorimi i ngjyrave pastel të lehta e bën ambientin të ngrohtë.</p>
-                                            <a href="Scafe.html" class="btn btn-secondary btn-sm view-more-btn" id="view_more_2">Shiko më shumë</a>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-12 tm-catalog-item">
-                                        <div class="position-relative tm-thumbnail-container">
-                                            <img src="images/projekte/restaurant/k_1 - Photo.jpg" alt="Image" class="img-fluid tm-catalog-item-img" onclick="navigateToProject('restaurant')">
-                                        </div>
-                                        <div class="p-4 tm-bg-gray tm-catalog-item-description">
-                                            <h3 class="tm-text-primary mb-3 tm-catalog-item-title" id="modern_restaurant">Restorant Modern</h3>
-                                            <p class="tm-catalog-item-text" id="modern_restaurant_desc">Përjetoni bashkimin e shijeve të shkëlqyera dhe ambientit bashkëkohor në restorantin tonë modern. Qoftë duke u mbledhur me të dashurit tuaj apo thjesht duke kërkuar një përvojë të këndshme ngrënieje, restoranti ynë pret të kënaqë shqisat tuaja.</p>
-                                            <a href="restaurant.html" class="btn btn-secondary btn-sm view-more-btn" id="view_more_3">Shiko më shumë</a>
+
+                                    <!-- CARD 1 -->
+                                    <div class="col-lg-4 col-md-6 col-sm-12">
+                                        <div class="card-wrapper">
+                                            <div class="tm-catalog-item">
+                                                <div class="position-relative tm-thumbnail-container">
+                                                    <img src="images/projekte/BeautySalon ps/1_1 - Photo.jpg" alt="Image" class="img-fluid tm-catalog-item-img" onclick="navigateToProject('beauty-salon')">
+                                                </div>
+
+                                                <div class="p-4 tm-bg-gray tm-catalog-item-description">
+                                                    <h3 class="tm-text-primary mb-3 tm-catalog-item-title">Sallon Bukurie</h3>
+                                                    <p class="tm-catalog-item-text">
+                                                        Zbuloni kulmin e bukurisë dhe relaksimit në sallonin tonë luksoz të bukurisë.
+                                                        Hyni në një botë përkujdesjeje dhe dilni duke u ndjerë të freskët, të sigurt dhe të bukur.
+                                                    </p>
+                                                    <a href="beauty-salon.html" class="btn btn-secondary btn-sm view-more-btn">Shiko më shumë</a>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-12 tm-catalog-item">
-                                        <div class="position-relative tm-thumbnail-container">
-                                            <img src="images/projekte/shpija/1_1 - Photo (1).jpg" alt="Image" class="img-fluid tm-catalog-item-img" onclick="navigateToProject('shpija')">
-                                        </div>
-                                        <div class="p-4 tm-bg-gray tm-catalog-item-description">
-                                            <h3 class="tm-text-primary mb-3 tm-catalog-item-title" id="glass_house">Shtëpia e Qelqtë</h3>
-                                            <p class="tm-catalog-item-text" id="glass_house_desc">Krijimi i shtëpive të ëndrrave në re para se të zbresin në tokë 🏠</p>
-                                            <a href="shpija.html" class="btn btn-secondary btn-sm view-more-btn" id="view_more_4">Shiko më shumë</a>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-12 tm-catalog-item">
-                                        <div class="position-relative tm-thumbnail-container">
-                                            <img src="images/projekte/shtepi 1PS/1_1 - Photo.jpg" alt="Image" class="img-fluid tm-catalog-item-img" onclick="navigateToProject('shtepi')">
-                                        </div>
-                                        <div class="p-4 tm-bg-gray tm-catalog-item-description">
-                                            <h3 class="tm-text-primary mb-3 tm-catalog-item-title" id="summer_house">Shtëpia e Verës</h3>
-                                            <p class="tm-catalog-item-text" id="summer_house_desc">Mos e imagjinoni vetëm, shiheni atë me vizualizimin e jashtëm. Le të krijojmë së bashku shtëpinë tuaj të përsosur! 👀 Ju lejojmë të vizualizoni çdo detaj, nga ngjyra e tullave deri te stili i çatisë.</p>
-                                            <a href="shtepi.html" class="btn btn-secondary btn-sm view-more-btn" id="view_more_5">Shiko më shumë</a>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-12 tm-catalog-item">
-                                        <div class="position-relative tm-thumbnail-container">
-                                            <img src="images/projekte/shtepi 2ps/1_1 - Photo.jpg" alt="Image" class="img-fluid tm-catalog-item-img" onclick="navigateToProject('shtepi_2ps')">
-                                        </div>
-                                        <div class="p-4 tm-bg-gray tm-catalog-item-description">
-                                            <h3 class="tm-text-primary mb-3 tm-catalog-item-title" id="modern_house">Shtëpi Moderne</h3>
-                                            <p class="tm-catalog-item-text" id="modern_house_desc">Transformimi i katër mureve në një kryevepër, një dhomë në një kohë.</p>
-                                            <a href="shtepi_2ps.html" class="btn btn-secondary btn-sm view-more-btn" id="view_more_6">Shiko më shumë</a>
+
+                                    <!-- CARD 2 -->
+                                    <div class="col-lg-4 col-md-6 col-sm-12">
+                                        <div class="card-wrapper">
+                                            <div class="tm-catalog-item">
+                                                <div class="position-relative tm-thumbnail-container">
+                                                    <img src="images/projekte/kafe/1.jpg" alt="Image" class="img-fluid tm-catalog-item-img" onclick="navigateToProject('Scafe')">
+                                                </div>
+
+                                                <div class="p-4 tm-bg-gray tm-catalog-item-description">
+                                                    <h3 class="tm-text-primary mb-3 tm-catalog-item-title">Kafene Sunrise</h3>
+                                                    <p class="tm-catalog-item-text">
+                                                        Dizajni i brendshëm i kafenesë Sunrise është krijuar për ta bërë ambientin sa më të këndshëm dhe mikpritës për klientët.
+                                                        Përdorimi i ngjyrave pastel të lehta e bën ambientin të ngrohtë dhe komod.
+                                                    </p>
+                                                    <a href="Scafe.html" class="btn btn-secondary btn-sm view-more-btn">Shiko më shumë</a>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
+
+                                    <!-- CARD 3 -->
+                                    <div class="col-lg-4 col-md-6 col-sm-12">
+                                        <div class="card-wrapper">
+                                            <div class="tm-catalog-item">
+                                                <div class="position-relative tm-thumbnail-container">
+                                                    <img src="images/projekte/restaurant/k_1 - Photo.jpg" alt="Image" class="img-fluid tm-catalog-item-img" onclick="navigateToProject('restaurant')">
+                                                </div>
+
+                                                <div class="p-4 tm-bg-gray tm-catalog-item-description">
+                                                    <h3 class="tm-text-primary mb-3 tm-catalog-item-title">Restorant Modern</h3>
+                                                    <p class="tm-catalog-item-text">
+                                                        Përjetoni ndërthurjen e shijeve të rafinuara dhe ambientit bashkëkohor në restorantin tonë modern.
+                                                        Qoftë duke u mbledhur me të dashurit tuaj apo duke kërkuar një përvojë të këndshme ngrënieje, restoranti ynë ju pret për t’ju kënaqur shqisat.
+                                                    </p>
+                                                    <a href="restaurant.html" class="btn btn-secondary btn-sm view-more-btn">Shiko më shumë</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- CARD 4 -->
+                                    <div class="col-lg-4 col-md-6 col-sm-12">
+                                        <div class="card-wrapper">
+                                            <div class="tm-catalog-item">
+                                                <div class="position-relative tm-thumbnail-container">
+                                                    <img src="images/projekte/shpija/1_1 - Photo (1).jpg" alt="Image" class="img-fluid tm-catalog-item-img" onclick="navigateToProject('shpija')">
+                                                </div>
+
+                                                <div class="p-4 tm-bg-gray tm-catalog-item-description">
+                                                    <h3 class="tm-text-primary mb-3 tm-catalog-item-title">Shtëpi me Xham</h3>
+                                                    <p class="tm-catalog-item-text">
+                                                        Krijojmë shtëpi ëndrrash në re para se të bëhen realitet 🏠
+                                                    </p>
+                                                    <a href="shpija.html" class="btn btn-secondary btn-sm view-more-btn">Shiko më shumë</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- CARD 5 -->
+                                    <div class="col-lg-4 col-md-6 col-sm-12">
+                                        <div class="card-wrapper">
+                                            <div class="tm-catalog-item">
+                                                <div class="position-relative tm-thumbnail-container">
+                                                    <img src="images/projekte/shtepi 1PS/1_1 - Photo.jpg" alt="Image" class="img-fluid tm-catalog-item-img" onclick="navigateToProject('shtepi')">
+                                                </div>
+
+                                                <div class="p-4 tm-bg-gray tm-catalog-item-description">
+                                                    <h3 class="tm-text-primary mb-3 tm-catalog-item-title">Shtëpi Verore</h3>
+                                                    <p class="tm-catalog-item-text">
+                                                        Mos e imagjinoni vetëm, shikojeni me vizualizim të jashtëm. Le të krijojmë së bashku shtëpinë tuaj perfekte!
+                                                        👀 Ju lejojmë të shihni çdo detaj, nga ngjyra e tullave deri te stili i kulmit.
+                                                    </p>
+                                                    <a href="shtepi.html" class="btn btn-secondary btn-sm view-more-btn">Shiko më shumë</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- CARD 6 -->
+                                    <div class="col-lg-4 col-md-6 col-sm-12">
+                                        <div class="card-wrapper">
+                                            <div class="tm-catalog-item">
+                                                <div class="position-relative tm-thumbnail-container">
+                                                    <img src="images/projekte/shtepi 2ps/1_1 - Photo.jpg" alt="Image" class="img-fluid tm-catalog-item-img" onclick="navigateToProject('shtepi_2ps')">
+                                                </div>
+
+                                                <div class="p-4 tm-bg-gray tm-catalog-item-description">
+                                                    <h3 class="tm-text-primary mb-3 tm-catalog-item-title">Shtëpi Moderne</h3>
+                                                    <p class="tm-catalog-item-text">
+                                                        Transformojmë katër mure në një kryevepër, një dhomë nga njëherë.
+                                                    </p>
+                                                    <a href="shtepi_2ps.html" class="btn btn-secondary btn-sm view-more-btn">Shiko më shumë</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </main>
                         </div>
@@ -155,42 +306,56 @@
     </main>
 
     <footer>
-        <h4 style="color:#aba4aa;">zsarchitecture</h4>
+        <h4 style="color:white;">zsarchitecture</h4>
         <hr>
-        <p>Prishtina 10000</p>
+        <p>Prishtinë 10000</p>
         <p>Numri i telefonit: +383 48 881 000</p>
         <a href="https://www.instagram.com/zsarchitecture.ks/" target="_blank"><img src="images/ig.webp" alt="iglogo"></a>
         <a href="mailto:zsarchitecture.ks@gmail.com" target="_blank"><img src="images/gm.png" alt="logogmail"></a>
     </footer>
 
-     <!-- JAVASCRIPT FILES -->
-     <script src="js/jquery.min.js"></script>
-     <script src="js/jquery.sticky.js"></script>
-     <script src="js/custom.js"></script>
-     <script src="js/language.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var introAnimation = document.querySelector('.intro-animation');
+            setTimeout(function() {
+                introAnimation.style.display = 'none';
+                document.body.style.visibility = 'visible';
+                document.body.style.opacity = '1';
+            }, 3000);
+        });
 
-<script>
-        // Flamuri për të kontrolluar nëse po navigohet larg faqes
+        var introShown = localStorage.getItem('introShown');
+
+        if (!introShown) {
+            var introAnimation = document.querySelector('.intro-animation');
+            setTimeout(function() {
+                introAnimation.style.display = 'none';
+                document.body.style.visibility = 'visible';
+                document.body.style.opacity = '1';
+            }, 3000);
+            localStorage.setItem('introShown', true);
+        }
+
         var navigatingAway = false;
 
-        // Funksioni për të trajtuar navigimin drejt projekteve
         function navigateToProject(projectName) {
-            // Vendos flamurin për të treguar navigimin larg
             navigatingAway = true;
-            // Ridrejtohuni në faqen përkatëse të projektit
             window.location.href = projectName + '.html';
         }
 
-        // Dëgjuesi i ngjarjeve për para-shkarkimin për të trajtuar navigimin larg
         window.addEventListener('beforeunload', function(event) {
-            // Nëse po navigohet larg nga faqja, hiqni flamurin
             if (navigatingAway) {
                 localStorage.removeItem('introShown');
             }
         });
+    </script>
 
-</script>
+    <!-- JAVASCRIPT FILES -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+
 </body>
 </html>
