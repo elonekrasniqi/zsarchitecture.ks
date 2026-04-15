@@ -16,15 +16,15 @@ body {
 
 a {
     transition: all 0.3s ease;
-    color: #666;
+    color: #6b7274;
 }
 
 
-h2, p { color:#5c6467d9;}
+h2, p { color:#6b7274;}
 
 .tm-bg-gray { background-color:
-    #aba4aa}
-.tm-text-primary .tm-catalog-item-title { color:#5c6467d9;}
+    rgba(255, 255, 255, 0.637)}
+.tm-text-primary .tm-catalog-item-title { color:#6b7274;}
 .tm-catalog-item-text{
     color: black;
 }

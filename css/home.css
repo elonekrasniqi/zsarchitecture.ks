@@ -16,11 +16,10 @@ a {
 }
 
 
-h2, p { color:#5c6467d9;}
+h2, p { color:#6b7274;}
 
-.tm-bg-gray { background-color:
-    #b5b1b5 }
-.tm-text-primary .tm-catalog-item-title { color:#5c6467d9;}
+.tm-bg-gray { background-color:rgba(255, 255, 255, 0.637) }
+.tm-text-primary .tm-catalog-item-title { color:#6b7274;}
 .tm-catalog-item-text{
     color: black;
 }
